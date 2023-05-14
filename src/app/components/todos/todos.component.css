@@ -1,0 +1,110 @@
+.todos {
+  margin: 40px;
+}
+.content,
+.id {
+  display: flex;
+  margin-right: 40px;
+  cursor: pointer;
+}
+.content {
+  width: 400px;
+}
+.content:hover {
+  opacity: 0.6;
+  transition: ease-in-out 0.3s all;
+}
+.content_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.todo.done .content {
+  text-decoration: line-through;
+}
+.todos_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 600px;
+  box-shadow: 1px 2px 36px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.todo-input {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  outline: none;
+  color: rgb(161, 161, 161);
+  box-shadow: 1px 2px 36px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.todo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 20px 0;
+  justify-content: center;
+  align-items: center;
+}
+.noItems.setHidden {
+  display: none;
+}
+.submit-todo {
+  padding: 10px 40px;
+  margin: 40px 0 0 0;
+  border-radius: 4px;
+  border: none;
+  background: rgb(129, 189, 129);
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+.submit-todo:hover {
+  transform: scale(0.9);
+  transition: all ease-in-out 0.3s;
+  opacity: 0.7;
+}
+.delete {
+  background: rgb(255, 222, 222);
+  border: none;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+.delete:hover,
+.editTask:hover {
+  transition: ease-in all 0.3s;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+.editTask {
+  background: rgb(139, 139, 255);
+  color: white;
+}
+
+@media screen and (max-width: 540px) {
+  .todos {
+    width: 100%;
+  }
+  .id {
+    margin-right: 15px;
+  }
+  .todos_container {
+    transform: scale(0.9);
+  }
+}

@@ -1,0 +1,53 @@
+<div class="todos_container">
+  <div class="todos">
+    <form (submit)="addTodo()">
+      <input
+        type="text"
+        name="inputTodo"
+        placeholder="Enter your todo here"
+        autofocus
+        autocomplete="off"
+        class="todo-input"
+        [(ngModel)]="ngModel"
+        title="Click here to insert your todo items"
+      />
+      <input
+        type="submit"
+        value="Add Todo"
+        class="submit-todo"
+        title="Click to add to todo item"
+      />
+    </form>
+    <div>
+      <div
+        *ngFor="let todo of todos; let i = index"
+        class="todo {{ todo.completed ? 'done' : '' }}"
+      >
+        <div class="id">{{ i }}</div>
+        <div class="content_container">
+          <div
+            class="content"
+            (click)="toggleDone(i)"
+            title="Click me to blacklist your todo"
+          >
+            {{ todo.content }}
+          </div>
+          <button
+            class="delete"
+            (click)="deleteTodo(i)"
+            title="Click to remove your todo item"
+          >
+            Remove
+          </button>
+          <button
+            class="editTask"
+            (click)="editTask(i)"
+            title="Click to edit your todo item"
+          >
+            Edit
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
