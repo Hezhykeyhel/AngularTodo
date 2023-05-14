@@ -35,6 +35,7 @@ export class TodosComponent implements OnInit {
   }
 
   addTodo() {
+  
     if (this.ngModel === '') return;
     if (this.ngModel.length <= 0) return;
     this.todos.push({
